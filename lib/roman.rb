@@ -12,7 +12,7 @@ class RomanNumbers
         when 'V'
             return 5
         when 'VI', 'VII', 'VIII'
-            return len(number) + 4
+            return number.length + 4
         when 'X'
             return 10
         else
