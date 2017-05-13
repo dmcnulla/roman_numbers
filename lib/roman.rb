@@ -6,7 +6,7 @@ class RomanNumbers
     def to_arabic(number)
         case number
         when 'I', 'II', 'III'
-            return len(number)
+            return number.length
         when 'IV'
             return 4
         when 'V'
