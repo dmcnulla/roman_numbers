@@ -1,28 +1,22 @@
-
-ONE = 'I'
-FIVE = 'V'
-TEN = 'X'
-
 class RomanNumbers
     def initialize()
         puts 'Welcome to Roman Numbers!'
     end
 
-    def roman(integer=nil)
-        integer ||= @integer
-        case integer
-        when 1..3
-            return (ONE * integer)
-        when 4
-            return (ONE + FIVE)
-        when 5..8
-            return (FIVE + (ONE * (integer - 5)))
-        when 9
-            return (ONE + TEN)
-        when 10
-            return (TEN)
+    def to_arabic(number)
+        case number
+        when 'I', 'II', 'III'
+            return len(number)
+        when 'IV'
+            return 4
+        when 'V'
+            return 5
+        when 'VI', 'VII', 'VIII'
+            return len(number) + 4
+        when 'X'
+            return 10
+        else
+            raise "Unsupported Roman Number: #{number}"
         end
-    else
-        raise "unsupported number: #{integer}"
     end
 end
